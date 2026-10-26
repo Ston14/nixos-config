@@ -1,0 +1,12 @@
+# Résultats des builds Nix
+result
+result-*
+
+# Fichiers temporaires
+*.swp
+*.swo
+*~
+
+# Secrets locaux
+.env
+.env.*
