@@ -4,6 +4,7 @@
   imports = [
     ./programs/fish.nix
     ./programs/navigation.nix
+    ./programs/git.nix
   ];
 
   home.username = "nixos";
