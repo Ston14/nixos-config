@@ -21,6 +21,7 @@
     ./programs/crypto.nix
     ./programs/docker.nix
     ./programs/security-cli.nix
+    ./programs/network-cli.nix
   ];
 
   home.username = "nixos";
