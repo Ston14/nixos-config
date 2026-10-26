@@ -12,7 +12,10 @@
     "nix-command"
     "flakes"
   ];
-
+  home-manager.users.nixos.programs.tmux.extraConfig = ''
+  # WSL : copie vers le presse-papiers Windows
+  bind -T copy-mode-vi y send -X copy-pipe-and-cancel "clip.exe"
+  '';
   environment.systemPackages = with pkgs; [
     git
     tmux
