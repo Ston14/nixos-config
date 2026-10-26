@@ -1,11 +1,22 @@
-{ ... }:
+
+{ pkgs, ... }:
 
 {
+  imports = [
+    ./tide.nix
+  ];
+
   programs.fish = {
     enable = true;
 
+    plugins = [
+      {
+        name = "tide";
+        src = pkgs.fishPlugins.tide.src;
+      }
+    ];
+
     interactiveShellInit = ''
-      # Disable default greeting
       set -g fish_greeting
     '';
 
@@ -16,3 +27,5 @@
     };
   };
 }
+
+

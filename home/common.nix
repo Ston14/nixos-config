@@ -3,6 +3,7 @@
 {
   imports = [
     ./programs/fish.nix
+    ./programs/navigation.nix
   ];
 
   home.username = "nixos";
