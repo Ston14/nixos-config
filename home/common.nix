@@ -16,6 +16,10 @@
     ./programs/tmux.nix
     ./programs/direnv.nix
     ./programs/yazi.nix
+    ./programs/ssh.nix
+    ./programs/gnupg.nix
+    ./programs/crypto.nix
+    ./programs/docker.nix
   ];
 
   home.username = "nixos";

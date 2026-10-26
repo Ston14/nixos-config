@@ -1,7 +1,9 @@
 { pkgs, ... }:
 
 {
-  
+  imports = [
+  ../../modules/nixos/docker.nix
+  ]; 
   wsl.enable = true;
   wsl.defaultUser = "nixos";
 
