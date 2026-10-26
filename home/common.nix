@@ -9,6 +9,7 @@
     ./programs/python.nix
     ./programs/rust.nix
     ./programs/go.nix
+    ./programs/nix-tools.nix
   ];
 
   home.username = "nixos";
