@@ -17,20 +17,14 @@
   bind -T copy-mode-vi y send -X copy-pipe-and-cancel "clip.exe"
   '';
   environment.systemPackages = with pkgs; [
-    git
-    tmux
     neovim
     ripgrep
     fd
     gcc
     unzip
-    zoxide
     yazi
-    vimPlugins.LazyVim
     tree-sitter
     curl
-    fzf
     lazygit
-    uv
   ];
 }
