@@ -5,6 +5,7 @@
     ./programs/fish.nix
     ./programs/navigation.nix
     ./programs/git.nix
+    ./programs/neovim.nix
   ];
 
   home.username = "nixos";
