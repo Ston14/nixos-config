@@ -15,6 +15,7 @@
     ./programs/freshfetch.nix
     ./programs/tmux.nix
     ./programs/direnv.nix
+    ./programs/yazi.nix
   ];
 
   home.username = "nixos";

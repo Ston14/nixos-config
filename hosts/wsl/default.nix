@@ -17,14 +17,5 @@
   bind -T copy-mode-vi y send -X copy-pipe-and-cancel "clip.exe"
   '';
   environment.systemPackages = with pkgs; [
-    neovim
-    ripgrep
-    fd
-    gcc
-    unzip
-    yazi
-    tree-sitter
-    curl
-    lazygit
   ];
 }
