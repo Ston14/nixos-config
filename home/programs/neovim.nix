@@ -1,6 +1,9 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 
 {
+  home.packages = with pkgs; [
+    trash-cli
+  ];
   home.sessionVariables = {
     EDITOR = "nvim";
     VISUAL = "nvim";

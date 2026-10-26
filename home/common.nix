@@ -6,6 +6,7 @@
     ./programs/navigation.nix
     ./programs/git.nix
     ./programs/neovim.nix
+    ./programs/python.nix
   ];
 
   home.username = "nixos";
