@@ -2,7 +2,7 @@
 
 {
   imports = [
-  ../../modules/nixos/docker.nix
+  ../../modules/nixos/common.nix
   ]; 
   wsl.enable = true;
   wsl.defaultUser = "nixos";
