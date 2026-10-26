@@ -1,12 +1,13 @@
 { pkgs, ... }:
 
 {
-  programs.fish.enable = true;
+  
   wsl.enable = true;
   wsl.defaultUser = "nixos";
 
   system.stateVersion = "26.05";
-
+  users.users.nixos.shell = pkgs.fish;
+  programs.fish.enable = true;
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
