@@ -10,6 +10,11 @@
     ./programs/rust.nix
     ./programs/go.nix
     ./programs/nix-tools.nix
+    ./programs/eza.nix
+    ./programs/btop.nix
+    ./programs/freshfetch.nix
+    ./programs/tmux.nix
+    ./programs/direnv.nix
   ];
 
   home.username = "nixos";

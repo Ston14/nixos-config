@@ -29,7 +29,9 @@
       };
     };
   };
-
+  programs.git.ignores = [
+    ".direnv/"
+  ];
   programs.delta = {
     enable = true;
     enableGitIntegration = true;
