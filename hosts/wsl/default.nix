@@ -1,6 +1,7 @@
 { pkgs, ... }:
 
 {
+  programs.fish.enable = true;
   wsl.enable = true;
   wsl.defaultUser = "nixos";
 
