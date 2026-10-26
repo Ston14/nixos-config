@@ -8,6 +8,7 @@
     ./programs/neovim.nix
     ./programs/python.nix
     ./programs/rust.nix
+    ./programs/go.nix
   ];
 
   home.username = "nixos";
