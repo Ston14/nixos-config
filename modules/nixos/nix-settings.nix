@@ -25,9 +25,10 @@
     # Préserver les générations tant que la stratégie
     # de sauvegarde et de rétention n'est pas finalisée.
     gc = {
-      automatic = false;
+      automatic = true;
       dates = "weekly";
       options = "--delete-older-than 90d";
+      persistent = true;
     };
   };
 }
