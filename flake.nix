@@ -1,5 +1,5 @@
 {
-  description = "Reproducible NixOS workstation";
+  description = "Reproducible NixOS workstation (WSL and laptop)";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
@@ -13,9 +13,14 @@
       url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    disko = {
+      url = "github:nix-community/disko";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { nixpkgs, nixos-wsl, home-manager, ... }: {
+  outputs = { nixpkgs, nixos-wsl, home-manager, disko, ... }: {
     nixosConfigurations.wsl = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
 
@@ -36,6 +41,28 @@
         }
       ];
     };
+
+    nixosConfigurations.laptop = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
+
+      modules = [
+        disko.nixosModules.disko
+        home-manager.nixosModules.home-manager
+        ./hosts/laptop/default.nix
+        ./hosts/laptop/disko.nix
+        {
+          home-manager = {
+            useGlobalPkgs = true;
+            useUserPackages = true;
+            backupFileExtension = "hm-backup";
+
+            users.nixos.imports = [
+              ./home/common.nix
+              ./home/desktop/default.nix
+            ];
+          };
+        }
+      ];
+    };
   };
 }
-
